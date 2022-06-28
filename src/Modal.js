@@ -169,6 +169,7 @@ class Modal {
         this.backdropActiveClass = config.backdropActiveClass;
         this.modal = config.modal;
         this.modalActiveClass = config.modalActiveClass;
+        this.modalID = config.modalIdTarget
         this.time = parseInt(config.transitionTime)
         this.JSUTIL = new JSUTIL();
         this.init()
@@ -179,10 +180,10 @@ class Modal {
     }
     events() {
 
-        document.querySelectorAll("[tf-ds-modal-target='modal-1']").forEach((element) => {
+        document.querySelectorAll(`[tf-ds-modal-target='${this.modalID}']`).forEach((element) => {
             element.addEventListener('click', event => this.showModal(element));
         })
-        document.querySelectorAll("[tf-ds-modal-close='modal-1']").forEach((element) => {
+        document.querySelectorAll(`[tf-ds-modal-close='${this.modalI}']`).forEach((element) => {
             element.addEventListener('click', event => this.hideModal(element));
         })
     }

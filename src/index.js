@@ -14,8 +14,9 @@ class Page{
             backdrop: 'b--modal-backdrop-a',
             backdropActiveClass: 'b--modal-backdrop-a--is-active',
             modal:'b--modal-a',
+            modalIdTarget : 'modal-1',
             modalActiveClass:'b--modal-a--is-active',
-            transitionTime:500
+            transitionTime:2500
         });
         modal.show()
         setTimeout(()=>{
