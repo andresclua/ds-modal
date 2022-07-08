@@ -16,17 +16,18 @@ class Page{
             modal:'b--modal-a',
             modalIdTarget : 'modal-1',
             modalActiveClass:'b--modal-a--is-active',
-            transitionTime:2500
+            onHide : () => {
+                console.log("hide modal");
+            },
+            onShow : () =>{
+                console.log("show");
+            }
         });
         modal.show()
         setTimeout(()=>{
             modal.hide()
         },3000)
         // // document.querySelector("[tf-ds-element='modal']")
-        // console.log(document.querySelector("[tf-ds-element='modal']"))
-
-     
-
 
     }
 }
